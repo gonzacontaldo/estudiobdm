@@ -22,7 +22,7 @@ export default function Hero() {
         <div className="max-w-3xl">
           {/* Eyebrow */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="mb-8 flex items-center gap-3"
@@ -35,7 +35,7 @@ export default function Hero() {
 
           {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-8 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
@@ -53,7 +53,7 @@ export default function Hero() {
 
           {/* Subtagline */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12 max-w-xl text-lg leading-relaxed text-white/60"
@@ -64,7 +64,7 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-wrap gap-4"
@@ -86,7 +86,7 @@ export default function Hero() {
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-16 flex flex-wrap gap-10 border-t border-white/10 pt-10"

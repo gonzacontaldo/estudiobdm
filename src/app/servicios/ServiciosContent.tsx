@@ -12,7 +12,7 @@ type Tab = "contable" | "juridico";
 function ServiceCard({ service, index }: { service: Service; index: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay: index * 0.06 }}
     >
@@ -60,7 +60,7 @@ export default function ServiciosContent() {
       <section className="bg-primary pt-32 pb-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
@@ -89,7 +89,7 @@ export default function ServiciosContent() {
 
           {/* Tab switcher */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             className="mb-10 flex items-center gap-1 rounded-sm border border-border bg-bg p-1 w-fit"
@@ -118,7 +118,7 @@ export default function ServiciosContent() {
           {/* Count label */}
           <motion.p
             key={activeTab + "-label"}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             className="mb-6 text-xs font-medium text-muted uppercase tracking-widest"
           >
@@ -129,7 +129,7 @@ export default function ServiciosContent() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 1 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}

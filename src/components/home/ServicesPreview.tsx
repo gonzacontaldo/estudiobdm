@@ -10,8 +10,8 @@ export default function ServicesPreview() {
     <section className="bg-surface py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 20 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4"
@@ -41,8 +41,8 @@ export default function ServicesPreview() {
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           {/* Contable */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: -20 }}
+            whileInView={{ x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="rounded-sm bg-bg border border-border p-8"
@@ -85,8 +85,8 @@ export default function ServicesPreview() {
 
           {/* Jurídico */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: 20 }}
+            whileInView={{ x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="rounded-sm bg-primary border border-primary p-8"

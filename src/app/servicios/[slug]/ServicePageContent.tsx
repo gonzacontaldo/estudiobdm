@@ -25,7 +25,7 @@ export default function ServicePageContent({ service, related }: Props) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <motion.nav
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4 }}
             className="mb-8 flex items-center gap-2 text-xs text-white/40"
@@ -38,7 +38,7 @@ export default function ServicePageContent({ service, related }: Props) {
           </motion.nav>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
@@ -63,7 +63,7 @@ export default function ServicePageContent({ service, related }: Props) {
             {/* Left: main content */}
             <div className="lg:col-span-2">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
@@ -79,7 +79,7 @@ export default function ServicePageContent({ service, related }: Props) {
                   {service.items.map((item, i) => (
                     <motion.li
                       key={item}
-                      initial={{ opacity: 0, x: -10 }}
+                      initial={{ x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: 0.2 + i * 0.07 }}
                       className="flex items-start gap-3 rounded-sm border border-border bg-bg p-4 hover:border-accent/30 transition-colors duration-200"
@@ -94,7 +94,7 @@ export default function ServicePageContent({ service, related }: Props) {
 
             {/* Right: sticky sidebar */}
             <motion.aside
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="lg:sticky lg:top-28 space-y-4 self-start"
@@ -179,8 +179,8 @@ export default function ServicePageContent({ service, related }: Props) {
               {related.map((s, i) => (
                 <motion.div
                   key={s.slug}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ y: 12 }}
+                  whileInView={{ y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.35, delay: i * 0.08 }}
                 >

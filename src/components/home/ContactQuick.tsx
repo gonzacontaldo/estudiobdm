@@ -29,8 +29,8 @@ export default function ContactQuick() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20 items-center">
           {/* Text */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: -20 }}
+            whileInView={{ x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
@@ -60,8 +60,8 @@ export default function ContactQuick() {
 
           {/* Offices */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: 20 }}
+            whileInView={{ x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="space-y-4"
