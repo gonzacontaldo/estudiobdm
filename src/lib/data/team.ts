@@ -32,16 +32,6 @@ export const team: TeamMember[] = [
     bio: "Especialista en auditoría interna. Certificado internacional en Ética y Compliance (Universidad del Cema, 2018).",
   },
   {
-    id: "carolina-mathieu",
-    name: "María Carolina Mathieu",
-    title: "Dra.",
-    role: "Socia",
-    specialties: ["Inmobiliario", "Sucesiones", "Contratos"],
-    education: "Abogada — UBA",
-    matricula: "Matriculada CALP desde 2008",
-    bio: "Especialista en asesoría inmobiliaria, regularizaciones dominiales, contratos y sucesiones. Especialización en Derecho Sucesorio (UBA, 2015). Docente en Contratos Civiles y Comerciales (cátedra Dr. Atilio Alterini).",
-  },
-  {
     id: "mercedes-del-valle",
     name: "María Mercedes del Valle",
     title: "Dra.",

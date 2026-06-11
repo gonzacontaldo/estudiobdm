@@ -93,7 +93,7 @@ export default function Hero() {
           >
             {[
               { value: "+20", label: "años de experiencia" },
-              { value: "5", label: "socios especializados" },
+              { value: "4", label: "socios especializados" },
               { value: "2", label: "sedes en Buenos Aires" },
             ].map((stat) => (
               <div key={stat.label}>

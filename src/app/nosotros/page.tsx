@@ -4,7 +4,7 @@ import NosotrosContent from "./NosotrosContent";
 export const metadata: Metadata = {
   title: "Nosotros",
   description:
-    "Conocé al equipo de BDM. Cinco socios especialistas en derecho y ciencias económicas con más de 20 años de trayectoria en Buenos Aires.",
+    "Conocé al equipo de BDM. Cuatro socios especialistas en derecho y ciencias económicas con más de 20 años de trayectoria en Buenos Aires.",
 };
 
 export default function NosotrosPage() {

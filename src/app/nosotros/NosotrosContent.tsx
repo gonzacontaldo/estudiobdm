@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { team } from "@/lib/data/team";
+import { offices } from "@/lib/data/offices";
 import CTABand from "@/components/home/CTABand";
 
 export default function NosotrosContent() {
@@ -76,7 +77,7 @@ export default function NosotrosContent() {
             >
               {[
                 { value: "+20", label: "años de experiencia" },
-                { value: "5", label: "socios especializados" },
+                { value: "4", label: "socios especializados" },
                 { value: "2", label: "sedes en Buenos Aires" },
                 { value: "14", label: "servicios especializados" },
               ].map((stat) => (
@@ -195,24 +196,9 @@ export default function NosotrosContent() {
           </motion.div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {[
-              {
-                city: "Buenos Aires",
-                zone: "C.A.B.A.",
-                address: "Tucumán 1585, Piso 6º Dto. B",
-                phone: "(11) 2125-0481",
-                tel: "+541121250481",
-              },
-              {
-                city: "Cañuelas",
-                zone: "Prov. Buenos Aires",
-                address: "Cnel. Brandsen 938",
-                phone: "(2226) 432739 / 433545",
-                tel: "+5422264327399",
-              },
-            ].map((office, i) => (
+            {offices.map((office, i) => (
               <motion.div
-                key={office.city}
+                key={office.id}
                 initial={{ y: 20 }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}

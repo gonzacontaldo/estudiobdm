@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { contableServices, juridicoServices } from "@/lib/data/services";
+import { offices } from "@/lib/data/offices";
 
 const YEAR = new Date().getFullYear();
 
@@ -12,14 +14,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="mb-4">
-              <p className="text-2xl font-bold tracking-widest text-white">
-                BDM
-              </p>
-              <p className="text-[10px] tracking-[0.2em] uppercase text-accent-light font-medium">
-                Abogados & Contadores
-              </p>
-            </div>
+            <Image
+              src="/logo-horizontal.png"
+              alt="Estudio BDM Abogados & Contadores"
+              width={500}
+              height={403}
+              className="mb-4 h-24 w-auto"
+            />
             <p className="text-sm leading-relaxed text-white/60 max-w-xs">
               Asesoramiento integral a personas, empresas y profesionales en
               materia contable y jurídica.
@@ -70,34 +71,23 @@ export default function Footer() {
               Contacto
             </p>
             <div className="space-y-4">
-              <div className="flex gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <div>
-                  <p className="text-xs font-medium text-white/90">CABA</p>
-                  <p className="text-sm text-white/60">
-                    Tucumán 1585, Piso 6º Dto. B
-                  </p>
-                  <a
-                    href="tel:+541121250481"
-                    className="text-sm text-white/60 hover:text-white transition-colors"
-                  >
-                    (11) 2125-0481
-                  </a>
+              {[...offices].reverse().map((office) => (
+                <div key={office.id} className="flex gap-2.5">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                  <div>
+                    <p className="text-xs font-medium text-white/90">
+                      {office.shortLabel}
+                    </p>
+                    <p className="text-sm text-white/60">{office.address}</p>
+                    <a
+                      href={`tel:${office.tel}`}
+                      className="text-sm text-white/60 hover:text-white transition-colors"
+                    >
+                      {office.phone}
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div className="flex gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <div>
-                  <p className="text-xs font-medium text-white/90">Cañuelas</p>
-                  <p className="text-sm text-white/60">Cnel. Brandsen 938</p>
-                  <a
-                    href="tel:+5422264327399"
-                    className="text-sm text-white/60 hover:text-white transition-colors"
-                  >
-                    (2226) 432739
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

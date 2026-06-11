@@ -4,23 +4,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-const offices = [
-  {
-    city: "Buenos Aires",
-    address: "Tucumán 1585, Piso 6º Dto. B",
-    phone: "(11) 2125-0481",
-    tel: "+541121250481",
-    zone: "CABA",
-  },
-  {
-    city: "Cañuelas",
-    address: "Cnel. Brandsen 938",
-    phone: "(2226) 432739",
-    tel: "+5422264327399",
-    zone: "Prov. Buenos Aires",
-  },
-];
+import { offices } from "@/lib/data/offices";
 
 export default function ContactQuick() {
   return (
@@ -66,9 +50,9 @@ export default function ContactQuick() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="space-y-4"
           >
-            {offices.map((office) => (
+            {[...offices].reverse().map((office) => (
               <div
-                key={office.city}
+                key={office.id}
                 className="flex gap-5 rounded-sm border border-border bg-bg p-6 hover:border-accent/30 transition-colors duration-300"
               >
                 <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-surface">

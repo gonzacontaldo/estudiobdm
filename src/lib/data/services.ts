@@ -30,8 +30,8 @@ export const services: Service[] = [
   },
   {
     slug: "contabilidad-auditoria-externa",
-    name: "Contabilidad & Auditoría Externa",
-    shortName: "Contabilidad",
+    name: "Contabilidad y Auditoría Externa",
+    shortName: "Contabilidad y Auditoría Externa",
     category: "contable",
     description:
       "Servicios de contabilidad y auditoría externa para empresas de todos los sectores, garantizando información financiera precisa y confiable.",
@@ -63,7 +63,7 @@ export const services: Service[] = [
   },
   {
     slug: "sueldos-cargas-sociales",
-    name: "Sueldos & Cargas Sociales",
+    name: "Sueldos y Cargas Sociales",
     shortName: "Sueldos",
     category: "contable",
     description:

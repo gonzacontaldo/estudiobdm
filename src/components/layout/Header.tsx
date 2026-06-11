@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -75,7 +76,15 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-18 items-center justify-between py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <Image
+              src="/logo-icon.png"
+              alt=""
+              width={88}
+              height={101}
+              priority
+              className="h-9 w-auto sm:h-10"
+            />
             <div className="flex flex-col leading-none">
               <span
                 className={cn(

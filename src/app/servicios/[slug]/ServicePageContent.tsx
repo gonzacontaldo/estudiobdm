@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, CheckCircle2, MessageCircle, Phone } from "lucide-react";
 import { type Service } from "@/lib/data/services";
+import { offices } from "@/lib/data/offices";
 
 const WHATSAPP_NUMBER = "5491121250481";
 
@@ -138,12 +139,9 @@ export default function ServicePageContent({ service, related }: Props) {
                 <p className="text-xs font-semibold tracking-widest uppercase text-muted">
                   Nuestras sedes
                 </p>
-                {[
-                  { city: "CABA", phone: "(11) 2125-0481", tel: "+541121250481" },
-                  { city: "Cañuelas", phone: "(2226) 432739", tel: "+5422264327399" },
-                ].map((office) => (
-                  <div key={office.city} className="flex items-center justify-between">
-                    <span className="text-sm font-medium text-ink">{office.city}</span>
+                {offices.map((office) => (
+                  <div key={office.id} className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-ink">{office.shortLabel}</span>
                     <a
                       href={`tel:${office.tel}`}
                       className="flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors"
